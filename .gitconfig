@@ -1,0 +1,30 @@
+[user]
+  name = Maxim Colls
+  email = collsmaxim@gmail.com
+[github]
+  user = mllocs
+[color]
+  ui = true
+[core]
+  editor = /usr/bin/vim
+  excludesfile = /Users/maximcolls/.gitignore_global
+[alias]
+  st = status
+  sts = status -s
+  ci = commit
+  cim = commit -m
+  co = checkout
+  di = diff
+  dc = diff --cached
+  aa = add --all
+  ap = add -p
+  aap = add --all -p
+  fa = fetch --all
+  b = branch
+
+  cur = "rev-parse --abbrev-ref HEAD"
+  cpush = "!f() { git cur ; }; git push origin `f`"
+  cpull = "!f() { git cur ; }; git pull --rebase origin `f`"
+  undo-last-commit = "!git reset --soft HEAD~1"
+  wip = "!git aa . && git cim 'wip'"
+  unwip = "!git undo-last-commit && git reset HEAD"
